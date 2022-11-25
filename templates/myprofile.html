@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if user %}
+    <h4>{{user.name}}</h4>
+    <hr>
+    Author: {{user.email}}
+    <hr>
+{% endif %}
+
+{% endblock body %}

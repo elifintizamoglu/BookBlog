@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>Books That You Read</h3>
+<hr>
+{% if books %}
+    <ul class="list-group">
+    {% for book in books %} 
+    <li class="list-group-item"><a href="/book/{{book.id}}">{{book.book_name}} </a></li>
+   {% endfor %}
+   </ul>
+{% else %}
+<div class="alert alert-danger">You have not read any book.</div>
+{% endif %}
+
+{% endblock body %}
+

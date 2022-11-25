@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if book %}
+    <h4>{{book.book_name}}</h4>
+    <hr>
+    Author: {{book.author}}
+    <hr>
+    {{book.content|safe}}
+
+{% else %}
+    <div class="alert alert-warning">
+    You have not read that book yet.
+    </div>
+{% endif %}
+
+{% endblock body %}

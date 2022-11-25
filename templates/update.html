@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>Book Update</h3>
+<hr>
+{% from "/formhelp.html" import render_field %}
+<form method = "post">
+    {{ render_field(form.book_name ,class="form-control")}}
+    {{ render_field(form.book_name ,class="form-control")}}
+    {{ render_field(form.content ,class="form-control")|safe }}
+  <button type="submit" class="btn btn-dark">Update</button>
+</form>
+{% endblock body %}
